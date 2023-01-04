@@ -1,0 +1,68 @@
+footer .content{
+    height: 50vh;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+footer h1{
+    color: white;
+    font-weight:900;
+    font-size:42px;
+    text-decoration: underline;
+    font-family:Poppins ;
+    letter-spacing: 2px;
+}
+
+.social-networks-container{
+    width: 30%;
+    height:70%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.limit{
+    width:1px;
+    height:45%;
+    background-color: aliceblue;
+}
+
+.social-logos{
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+
+}
+
+.social-logos img{
+    width:70px;
+    height: 70px;
+}
+.social-logos .twitter:hover{
+    filter: invert(40%) sepia(95%) saturate(703%) hue-rotate(168deg) brightness(96%) contrast(88%);
+}
+.social-logos .pinterest:hover{
+    filter: brightness(0) saturate(100%) invert(13%) sepia(76%) saturate(5187%) hue-rotate(357deg) brightness(90%) contrast(118%);
+}
+.insta_color{
+    display: none;
+}
+.insta:hover + .insta_color{
+    display: inline;
+}
+.insta:hover {
+    display: none;
+}
+
+.other-container{
+    width: 30%;
+    height:70%;
+    background-color:red;
+}

@@ -1,0 +1,43 @@
+header{
+    width:100%;
+    height:150px;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color:#1C1C1C;
+    z-index:100;
+    /*background-color:red;*/
+    /* background-color: black; */
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content .side-menu{
+    height:55px;
+    width:55px;
+    margin-left:40px;
+    background-position: center;
+    background-size: 165%;
+}
+
+.content .right{
+    margin-left:40px;
+}
+
+.content .logo{
+    width:400px;
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+.menu{
+    width:90px;
+}
