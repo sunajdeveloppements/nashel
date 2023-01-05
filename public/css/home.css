@@ -55,11 +55,26 @@ body {
 	visibility: visible;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS */
+
 .projects-container{
-    height: 180vh;
+    height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content:center;
+	margin-top: 10%;
+	margin-bottom:10%;
 }
 .projects{
 	width: 50%;
@@ -146,6 +161,17 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* IMAGES SLIDER */
 
 .slides {
@@ -184,6 +210,11 @@ body {
 	background-size: cover;
 }
 
+.odonata{
+	background-position:50% 6%;
+	background-size: cover;
+}
+
 .dots{
 	margin-top: 25px;
 }
@@ -201,4 +232,8 @@ body {
 
 .active, .dot:hover {
 	background-color: #717171;
+}
+
+#preload{
+	display: none;
 }

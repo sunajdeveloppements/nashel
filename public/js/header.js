@@ -28,14 +28,22 @@ document.addEventListener("click", (e) => {
 });
 
 const menu=document.getElementById('menu');
-const header=document.getElementsByClassName('content');
-window.addEventListener('scroll', () => {
-    
-    const scrolled = window.scrollY;
-    if(scrolled>=150.0) {
-        header.classList.add(menu);
-    } else {
-        header.classList.remove(menu);
-    }
-});
+const header=document.getElementById('content');
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.documentElement.scrollTop >= 290) {
+    document.getElementById('head').style.height='75px';
+    document.getElementById('logo').style.backgroundSize='40%';
+    document.getElementById('menu').style.display='none';
+    document.getElementById('side-menu').style.display='none';
+    document.getElementById('head').style.justifyContent='center';
+  } else {
+    document.getElementById('head').style.height='150px';
+    document.getElementById('logo').style.backgroundSize='90%';
+    document.getElementById('menu').style.display='block';
+    document.getElementById('side-menu').style.display='block';
+    document.getElementById('head').style.justifyContent='space-between';
+  }
+}
 

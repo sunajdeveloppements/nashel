@@ -9,22 +9,22 @@
   <link type="text/css" rel="stylesheet" href="public/css/header.css">
   <link type="text/css" rel="stylesheet" href="public/css/footer.css">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="public/img/LOGON2.ico">
   <script src="public/js/header.js"></script>
   <script src="public/js/home.js"></script>
   <title>NASHEL</title>
 </head>
 
 <!-- HEADER -->
-<header>
-    <div class="content" id="content">
-        <a id="menu" onClick="openNav()" data-toggle="modal" data-target="#sidenavcart">
-            <div class="side-menu right" style="background-image:url('public/img/menu1.png');"></div>
-        </a>
-        <div class="logo" style="background-image:url('public/img/ARTWORK/logo.png');"> 
-        </div> 
-        <div class="side-menu"></div>
-    </div>
-</header>
+
+<div class="content" id="head">
+    <a id="menu" onClick="openNav()" data-toggle="modal" data-target="#sidenavcart">
+        <div class="side-menu right" style="background-image:url('public/img/menu1.png');"></div>
+    </a>
+    <div class="logo" id="logo" style="background-image:url('public/img/ARTWORK/logo.png');"> </div> 
+    <div class="side-menu"></div>
+</div>
+
 
 
 <!-- BODY -->
@@ -42,6 +42,14 @@
 
 
     <!-- PICTURES SLIDER -->
+    <!-- PRELOAD -->
+    <div id="preload">
+        <img src="public/img/ARTWORK/projects_grid-min.jpg" />
+        <img src="public/img/ARTWORK/wave_banner-min.jpg" />
+        <img src="public/img/ARTWORK/santorini.jpg" />
+        <img src="public/img/ARTWORK/odonata_red.jpg" />
+    </div>
+
     <div class="slides">
         <div class="pic santorini" style="background-image:url('public/img/ARTWORK/santorini.jpg');"></div>
     </div>
@@ -54,10 +62,16 @@
         <div class="pic grid" style="background-image:url('public/img/ARTWORK/projects_grid-min.jpg');"></div>
     </div>
 
+    <div class="slides">
+        <div class="pic odonata" style="background-image:url('public/img/ARTWORK/odonata_red.jpg');"></div>
+    </div>
+
+
     <div style="text-align:center" class="dots">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
 
@@ -80,6 +94,9 @@
             </div>
         </div>  
     </div>
+
+
+
 </body>
 
 
