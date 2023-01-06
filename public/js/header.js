@@ -30,20 +30,11 @@ document.addEventListener("click", (e) => {
 const menu=document.getElementById('menu');
 const header=document.getElementById('content');
 
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.documentElement.scrollTop >= 290) {
-    document.getElementById('head').style.height='75px';
-    document.getElementById('logo').style.backgroundSize='40%';
-    document.getElementById('menu').style.display='none';
-    document.getElementById('side-menu').style.display='none';
-    document.getElementById('head').style.justifyContent='center';
+$(window).scroll(function(){
+  if($(document).scrollTop() > 0) {
+      $('#head').addClass('small');
   } else {
-    document.getElementById('head').style.height='150px';
-    document.getElementById('logo').style.backgroundSize='90%';
-    document.getElementById('menu').style.display='block';
-    document.getElementById('side-menu').style.display='block';
-    document.getElementById('head').style.justifyContent='space-between';
+      $('#head').removeClass('small');
   }
-}
+});
 
