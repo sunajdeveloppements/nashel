@@ -6,6 +6,8 @@
 body {
     background-color: #141414;
     width: 100%;
+	font-family: Roboto Slab;
+	font-weight: 300;
 }
 
 .sidenav{
@@ -26,6 +28,7 @@ body {
 #sidenav .closebtn {
     margin-left: 45px;
     margin-top: 30px;
+	max-width: 20px;
 	font-size: 70px;
 	cursor: pointer;
     color: grey;
@@ -48,23 +51,22 @@ body {
 	visibility: hidden;
 	z-index: 100;
 	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+	overflow :hidden;
 }
 
 #overlay.isVisible {
 	opacity: 100;
 	visibility: visible;
+	overflow :hidden;
 }
 
+body.notScrollable {
+	overflow: hidden;
+}
 
-
-
-
-
-
-
-
-
-
+.pic.santorini{
+	display: block;
+}
 
 /* PROJECTS */
 
@@ -236,4 +238,20 @@ body {
 
 #preload{
 	display: none;
+}
+
+@media only screen and (max-width: 650px){
+	.projects{
+		aspect-ratio: 0;
+		width:80%;
+	}
+	.projects .bottom{
+		flex-direction: column;
+	}
+	.projects .bottom .proj{
+		width: 100%;
+	}
+	.projects .bottom .proj.graphism{
+		background-size: cover;
+	}
 }

@@ -1,8 +1,9 @@
 const overlay = document.getElementById("overlay");
 function openNav() {
     console.log('open !');
-    document.getElementById("sidenav").style.transform = "translateX(0px)"
     document.getElementById("overlay").classList.add("isVisible")
+    
+    document.getElementById("sidenav").style.transform = "translateX(0px)"
     document.body.classList.add("notScrollable")
 }
 
@@ -16,8 +17,6 @@ function closeNav() {
     document.body.classList.remove("notScrollable")
 }
 
-
-
 document.addEventListener("click", (e) => {
     console.log('closed');
     let clickedElem = e.target;
@@ -30,11 +29,24 @@ document.addEventListener("click", (e) => {
 const menu=document.getElementById('menu');
 const header=document.getElementById('content');
 
-$(window).scroll(function(){
-  if($(document).scrollTop() > 0) {
-      $('#head').addClass('small');
-  } else {
-      $('#head').removeClass('small');
-  }
+window.onscroll = function () {
+    const header=document.getElementById('head');
+    if (window.pageYOffset <100){
+        header.style.transform="translateY(0)";
+        console.log("B");
+    } else {
+        header.style.transform ="translateY(-100%)";
+        console.log("A");
+    }
+};
+
+const block = document.getElementById("overlay");
+
+block.addEventListener("mouseenter", function() {
+  document.body.style.overflow = "hidden";
+});
+
+block.addEventListener("mouseleave", function() {
+  document.body.style.overflow = "scroll";
 });
 

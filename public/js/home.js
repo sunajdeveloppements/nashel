@@ -1,6 +1,11 @@
 let slideIndex = 0;
+let already=false;
 
-function showSlides() {
+
+setInterval(function showSlides() {
+  if(already=false){
+    already=true;
+  }
   let i;
   let slides = document.getElementsByClassName("slides");
   let dots = document.getElementsByClassName("dot");
@@ -14,10 +19,10 @@ function showSlides() {
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  console.log("actual index = "+slideIndex);
 }
+, 4000);
 
-setInterval(showSlides, 5000);
+
 
 function hoverProjects(e){
     document.getElementById("text "+e.className.split(" ")[1]).style.display="block";
@@ -26,6 +31,7 @@ function hoverProjects(e){
 function notHoverProjects(e){
     document.getElementById("text "+e.className.split(" ")[1]).style.display="none";
 }
+
 
 
 
