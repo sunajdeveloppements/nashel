@@ -52,10 +52,14 @@ body .ERROR{
 }
 
 .loader{
-    font-size: 20px;
-    color: #a9a9a9;
-    font-family: Lato,sans-serif;
-    height: 0px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    align-items:center;
+}
+.loader.hide{
+    display: none;
 }
 #refreshPopular{
     background-color: #555555;

@@ -2,10 +2,10 @@ const key = "381cc2db27bb9cdcd712453cd2b2669b";
 const baseURL = "https://api.themoviedb.org/3";
 const imgURL = "https://image.tmdb.org/t/p/w1280";
 const colorThief=new ColorThief();
-setTimeout(() => {
-    if(document.getElementById("app_container").innerHTML=="")
-        console.log("MERDE")
-}, 5000);
+const loader=document.getElementById("#loading")
+document.addEventListener("load", ()=> {
+    loader.classList.add('hide')
+})
 
 const movieDAO = {
     getPopulars : async (page=1) => {
