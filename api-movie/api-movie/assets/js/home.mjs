@@ -2,10 +2,7 @@ const key = "381cc2db27bb9cdcd712453cd2b2669b";
 const baseURL = "https://api.themoviedb.org/3";
 const imgURL = "https://image.tmdb.org/t/p/w1280";
 const colorThief=new ColorThief();
-setTimeout(() => {
-    if(document.getElementById("app_container").innerHTML=="")
-        console.log("MERDE")
-}, 5000);
+
 
 const movieDAO = {
     getPopulars : async (page=1) => {
@@ -46,22 +43,17 @@ const movieDAO = {
     }
 }
 
-try{
-    class Button extends React.Component{
-        constructor(e){
-            super(e)
-        }
-        render(){
-            return(
-                <button  className={this.props.color}>{this.props.value}</button>
-                
-            )
-        }
+class Button extends React.Component{
+    constructor(e){
+        super(e)
     }
-} catch(e){
-    console.log("BITE")
+    render(){
+        return(
+            <button  className={this.props.color}>{this.props.value}</button>
+            
+        )
+    }
 }
-
 
 class Actor extends React.Component {
     render(){
@@ -208,7 +200,6 @@ class App extends React.Component {
         movieDAO.getPopulars().then((data) => {
             this.setState({ movies: data.results });
         });
-        console.log(this.state.movies)
         movieDAO.getPopularActors().then((data) => {
             this.setState({ actors: data.results });
         });
