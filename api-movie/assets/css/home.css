@@ -54,8 +54,8 @@ body .ERROR{
 .loader{
     font-size: 28px;
     display: flex;
-    justify-content: center;
     height: 95vh;
+    justify-content: center; 
     align-items:center;
 }
 .loader.hide{
