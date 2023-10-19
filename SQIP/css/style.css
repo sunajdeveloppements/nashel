@@ -1,0 +1,109 @@
+html, body {
+    margin: 0px;
+    font-family: "Helvetica","Arial",sans-serif;
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+    background-image: url("../img/FOND.jpg");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: center top -150px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container.visible {
+    display: flex;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.links.hidden {
+    display: none;
+}
+
+.links a {
+    width: fit-content;
+}
+
+.links a img {
+    max-width: 100%;
+}
+
+.listen {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 55px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.button.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+#background-video {
+    background-color: black;
+    height: 80vh;
+    width: 100vw;
+    object-fit: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: opacity 1s linear;
+}
+
+#videoOverlay {
+    opacity: 1;
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: calc(80vh / 2);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: opacity 2s linear;
+}
+
+#videoOverlay.hidden{
+    opacity: 0;
+}
+
+#videoOverlay h1{
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+#videoOverlay p{
+    font-size: 2rem;
+    font-weight: 200;
+}
